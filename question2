@@ -1,0 +1,11 @@
+mkdir MSDM5001
+cd MSDM5001
+mkdir DDM{1..100}
+for num in {1..100}
+do 
+  cd DDM${num}
+  touch time_till_now.txt
+  echo 'nanoseconds since 1970-01-01 00:00:00 UTC:' >time_till_now.txt
+  echo "<`date +%s`>" >> time_till_now.txt
+  cd -
+done
