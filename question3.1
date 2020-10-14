@@ -1,0 +1,12 @@
+import re
+text = ''
+file = open('blocklist.xml')
+for line in file:
+    text = text + line
+stri = re.findall(r'<.*blockID="i.*\d".*>',text)
+strg = re.findall(r'<.*blockID="g.*\d".*>',text)
+for i in stri:
+    print(i)
+for g in strg:
+    print(g)
+file.close()
