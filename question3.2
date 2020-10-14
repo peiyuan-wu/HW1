@@ -1,0 +1,9 @@
+import re
+text = ''
+file = open('blocklist.xml')
+for line in file:
+    text = text + line
+str_email = re.findall(r'<.*id=".*@.*com">',text)
+for i in str_email:
+    print(i)
+file.close()
